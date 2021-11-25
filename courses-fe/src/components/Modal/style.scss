@@ -1,0 +1,22 @@
+.svg-class {
+    background: none;
+    color: red;
+    border: none;
+
+    &:hover, &:focus {
+        //background: none;
+        background: none;
+    }
+}
+
+.btn-primary {
+    color: black !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    &:focus {
+        color: black;
+        background: none;
+        border: none;
+    }
+}
