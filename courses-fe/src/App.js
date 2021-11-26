@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import './styles.scss';
@@ -16,7 +16,6 @@ function App() {
     <div className="App">
       <Header />
       <Router>
-      <Fragment>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -24,7 +23,6 @@ function App() {
           <Route path="/details-page" element={<DetailsPage />} />
           <Route path="/service" element={<Service />} />
         </Routes>
-        </Fragment>
       </Router>
     </div>
   );
