@@ -1,5 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
+const ServiceComponent = () => {
+  const [count, setCount] = useState(0);
 
-export default function Service() {
-  return <div>Service Page</div>;
-}
+  return (
+  <div>
+    <h2>ServicePage</h2>
+    <div>Count: {count}</div>
+    <button onClick={() => {setCount(count + 1)}}>+</button>
+    <button onClick={() => {setCount(count - 1)}} >-</button>
+  </div>
+  )}
+
+export default ServiceComponent;
