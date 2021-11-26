@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './styles.scss';
 import Home from './pages/Home';
 import About from './pages/about';
+import Login from './pages/login';
 import Table from './components/Table/TableComponent';
 import DetailsPage from './components/DetailsPage/DetailsPageComponent';
 import Service from './components/Service/ServiceComponent';
@@ -15,7 +16,8 @@ function App() {
     <div>
       <Router>
         <Routes>
-          <Route path="/" element={<PageTemplate><Home /></PageTemplate>} />
+          <Route path="/" element={<Login />} />
+          <Route path="/home" element={<PageTemplate><Home /></PageTemplate>} />
           <Route path="/about" element={<PageTemplate><About /></PageTemplate>} />
           <Route path="/table-page" element={<PageTemplate><Table /></PageTemplate>} />
           <Route path="/details-page" element={<PageTemplate><DetailsPage /></PageTemplate>} />
