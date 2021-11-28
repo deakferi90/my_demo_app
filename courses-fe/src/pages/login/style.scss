@@ -1,0 +1,39 @@
+.login-container {
+    margin: 0 auto;
+    width: 500px !important;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .btn-primary {
+        color: #fff !important;
+        background-color: #0d6efd !important;
+        border-color: #0d6efd !important;
+
+        &:hover {
+            background: darkblue !important;
+        }
+    }
+
+    .btn-link {
+        text-decoration: none;
+        background: #C4A484;
+        color: #fff;
+        margin-left: 10px;
+        &:focus {
+            box-shadow: none;
+        }
+        &:hover {
+            color: #fff;
+            background: #654321 !important;
+        }
+    }
+}
+
+.form-group {
+    .btn-primary, .btn-link {
+        margin-top: 20px;
+    }
+}
