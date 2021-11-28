@@ -5,11 +5,13 @@ import './styles.scss';
 import Home from './pages/Home';
 import About from './pages/about';
 import Login from './pages/login';
+import { Register } from './pages/register';
 import Table from './components/Table/TableComponent';
 import DetailsPage from './components/DetailsPage/DetailsPageComponent';
 import Service from './components/Service/ServiceComponent';
 import PageTemplate from './templates/PageTemplate';
 import './App.css';
+import RegisterComponent from './pages/register/RegisterComponent';
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Login />} />
+          <Route path="/register" element = {<Register />}/>
           <Route path="/home" element={<PageTemplate><Home /></PageTemplate>} />
           <Route path="/about" element={<PageTemplate><About /></PageTemplate>} />
           <Route path="/table-page" element={<PageTemplate><Table /></PageTemplate>} />
