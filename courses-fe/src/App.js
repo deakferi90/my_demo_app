@@ -11,7 +11,7 @@ import DetailsPage from './components/DetailsPage/DetailsPageComponent';
 import Service from './components/Service/ServiceComponent';
 import PageTemplate from './templates/PageTemplate';
 import './App.css';
-import RegisterComponent from './pages/register/RegisterComponent';
+
 
 function App() {
   return (
