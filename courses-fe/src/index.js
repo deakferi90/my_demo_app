@@ -6,11 +6,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import allReducer from './reducers';
+import rootReducer from './reducers';
 import { Provider } from 'react-redux';
 
 const store = createStore(
-  allReducer,
+  rootReducer,
   applyMiddleware(thunk)
   );
 
