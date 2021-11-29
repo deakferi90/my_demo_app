@@ -1,0 +1,2 @@
+export const INCREMENT_REGISTER = 'register/INCREMENT_REGISTER';
+export const DECREMENT_REGISTER = 'register/DECREMENT_REGISTER';

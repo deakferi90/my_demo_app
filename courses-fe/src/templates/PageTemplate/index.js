@@ -4,7 +4,7 @@ import Header from "../../shared/header";
 const PageTemplate = ({ children }) => {
   return (
     <Fragment>
-        <Header />
+      <Header />
       <Fragment>{children}</Fragment>
     </Fragment>
   );
