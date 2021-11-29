@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './styles.scss';
 import Home from './pages/Home';
 import About from './pages/about';
-import Login from './pages/login';
+import { Login } from './pages/login';
 import { Register } from './pages/register';
 import Table from './components/Table/TableComponent';
 import DetailsPage from './components/DetailsPage/DetailsPageComponent';
