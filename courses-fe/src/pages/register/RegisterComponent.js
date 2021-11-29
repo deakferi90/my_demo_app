@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './style.scss';
 
-const RegisterComponent = () => {
+const RegisterComponent = ({ counter=0 }) => {
 
     const [submitted, setSubmitted] = useState(false);
     const [name, setName] = useState('');
@@ -25,6 +25,9 @@ const RegisterComponent = () => {
     };
 
     return (
+        <Fragment>
+        <div>Example for redux flow:</div>
+        <div>{counter}<button>Increment</button><button>Decrement</button></div>
         <div className="register-container col-md-6 col-md-offset-3">
         <h2>Register</h2>
         <div>
@@ -71,6 +74,7 @@ const RegisterComponent = () => {
             </div>
         </div>
     </div>
+    </Fragment>
     );
 }
 
