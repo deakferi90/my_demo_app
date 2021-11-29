@@ -1,8 +1,8 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './style.scss';
 
-const RegisterComponent = ({ counter=0 }) => {
+const RegisterComponent = (props) => {
 
     const [submitted, setSubmitted] = useState(false);
     const [name, setName] = useState('');
@@ -10,11 +10,10 @@ const RegisterComponent = ({ counter=0 }) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
+    const { increment, decrement, model } =  props;
+    const { count } = model;
 
-    const handleSubmit = () => {
-        console.log('Ai da click pe submit');
-        setSubmitted(true);
-    }
+
     const handleRegister = () => {
         console.log('Register');
         console.log('Name: ', name);
@@ -27,7 +26,7 @@ const RegisterComponent = ({ counter=0 }) => {
     return (
         <Fragment>
         <div>Example for redux flow:</div>
-        <div>{counter}<button>Increment</button><button>Decrement</button></div>
+        <div>{count}<button onClick={increment}>Increment</button><button onClick={decrement}>Decrement</button></div>
         <div className="register-container col-md-6 col-md-offset-3">
         <h2>Register</h2>
         <div>
