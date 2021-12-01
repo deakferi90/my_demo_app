@@ -38,7 +38,7 @@ const RegisterComponent = (props) => {
                 }
             </div>
             <div className={'form-group' + (submitted && !email ? ' has-error' : '')}>
-                <label htmlFor="email">Name</label>
+                <label htmlFor="email">Email</label>
                 <input type="text" className="form-control" name="email" value={email} onChange={(e) => {setEmail(e.target.value)}} />
                 {submitted && !email &&
                     <div className="help-block">Email is required</div>
