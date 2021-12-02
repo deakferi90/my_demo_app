@@ -7,10 +7,10 @@ const LoginPage = (props) => {
     const [password, setPassword] = useState('');
     const [submitted, setSubmitted] = useState(false);
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setUserName({ [name]: value });
-    }
+    // const handleChange = (e) => {
+    //     const { name, value } = e.target;
+    //     setUserName({ [name]: value });
+    // }
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -35,14 +35,14 @@ const LoginPage = (props) => {
             <form name="form" onSubmit={handleSubmit}>
                 <div className={'form-group' + (submitted && !userName ? ' has-error' : '')}>
                     <label htmlFor="username">Username</label>
-                    <input type="text" className="form-control" name="username" value={userName} onChange={handleChange} />
+                    <input type="text" className="form-control" name="username" value={userName} onChange={(e) => setUserName(e.target.value)} />
                     {submitted && !userName &&
                         <div className="help-block">Username is required</div>
                     }
                 </div>
                 <div className={'form-group' + (submitted && !password ? ' has-error' : '')}>
                     <label htmlFor="password">Password</label>
-                    <input type="password" className="form-control" name="password" value={password} onChange={handleChange} />
+                    <input type="password" className="form-control" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
                     {submitted && !password &&
                         <div className="help-block">Password is required</div>
                     }
