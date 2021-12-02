@@ -7,21 +7,11 @@ const LoginPage = (props) => {
     const [password, setPassword] = useState('');
     const [submitted, setSubmitted] = useState(false);
 
-    // const handleChange = (e) => {
-    //     const { name, value } = e.target;
-    //     setUserName({ [name]: value });
-    // }
-
     const handleSubmit = (e) => {
         e.preventDefault();
         setSubmitted(true);
-        //const { username, password } = this.state;
-        if (userName && password) {
-            this.props.login(userName, password);
-        }
     }
 
-    //const { username, password, submitted } = this.state;
     const { increment, decrement, model } = props;
     const { count } = model;
     return (
