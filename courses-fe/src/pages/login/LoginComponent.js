@@ -11,16 +11,8 @@ const LoginPage = (props) => {
         e.preventDefault();
         setSubmitted(true);
     }
-
-    const { increment, decrement, model } = props;
-    const { count } = model;
     return (
         <div className="login-container col-md-6 col-md-offset-3">
-            <div className='math-problem'>
-                <div>Example for redux flow:</div>
-                <div><button onClick={increment}>Increment</button><button onClick={decrement}>Decrement</button></div>
-                {count}
-            </div>
             <h2>Login</h2>
             <form name="form" onSubmit={handleSubmit}>
                 <div className={'form-group' + (submitted && !userName ? ' has-error' : '')}>
