@@ -14,9 +14,19 @@
     background: none !important;
     border: none !important;
     box-shadow: none !important;
+
     &:focus {
         color: black;
         background: none;
         border: none;
+    }
+}
+
+#closeBtn {
+    color: honeydew !important;
+    background: blue !important;
+
+    &:hover {
+        background: black !important;
     }
 }

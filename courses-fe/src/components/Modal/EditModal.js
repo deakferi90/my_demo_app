@@ -30,7 +30,7 @@ export class EditModal extends React.Component {
                         Body
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button onClick={this.handleModal}>Close</Button>
+                        <Button id='closeBtn' onClick={this.handleModal}>Close</Button>
                     </Modal.Footer>
                 </Modal>
             </div>
