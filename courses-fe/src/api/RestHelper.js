@@ -7,8 +7,8 @@ const axiosInstance = axios.create({
 });
 
 class RestHelper {
-    constructor(instanceOne) {
-        this.instance = instanceOne;
+    constructor(instance) {
+        this.instance = instance;
     }
 
     getUrl(url) {
