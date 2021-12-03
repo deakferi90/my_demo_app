@@ -7,30 +7,12 @@ const LoginPage = (props) => {
     const [password, setPassword] = useState('');
     const [submitted, setSubmitted] = useState(false);
 
-    // const handleChange = (e) => {
-    //     const { name, value } = e.target;
-    //     setUserName({ [name]: value });
-    // }
-
     const handleSubmit = (e) => {
         e.preventDefault();
         setSubmitted(true);
-        //const { username, password } = this.state;
-        // if (userName && password) {
-        //     this.props.login(userName, password);
-        // }
     }
-
-    //const { username, password, submitted } = this.state;
-    const { increment, decrement, model } = props;
-    const { count } = model;
     return (
         <div className="login-container col-md-6 col-md-offset-3">
-            <div className='math-problem'>
-                <div>Example for redux flow:</div>
-                <div><button onClick={increment}>Increment</button><button onClick={decrement}>Decrement</button></div>
-                {count}
-            </div>
             <h2>Login</h2>
             <form name="form" onSubmit={handleSubmit}>
                 <div className={'form-group' + (submitted && !userName ? ' has-error' : '')}>

@@ -10,9 +10,6 @@ const RegisterComponent = (props) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-    const { increment, decrement, model } =  props;
-    const { count } = model;
-
 
     const handleRegister = () => {
         console.log('Register');
@@ -25,8 +22,6 @@ const RegisterComponent = (props) => {
 
     return (
         <Fragment>
-        <div>Example for redux flow:</div>
-        <div>{count}<button onClick={increment}>Increment</button><button onClick={decrement}>Decrement</button></div>
         <div className="register-container col-md-6 col-md-offset-3">
         <h2>Register</h2>
         <div>
@@ -38,7 +33,7 @@ const RegisterComponent = (props) => {
                 }
             </div>
             <div className={'form-group' + (submitted && !email ? ' has-error' : '')}>
-                <label htmlFor="email">Name</label>
+                <label htmlFor="email">Email</label>
                 <input type="text" className="form-control" name="email" value={email} onChange={(e) => {setEmail(e.target.value)}} />
                 {submitted && !email &&
                     <div className="help-block">Email is required</div>
