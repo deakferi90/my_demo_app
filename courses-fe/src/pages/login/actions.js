@@ -17,8 +17,9 @@ export const  loginUser = (credentials, navigate) => {
     return async (dispatch) => {
       try {
           const res = await userApi.login(credentials);
-          const { access_token } = res.data;
+          const { access_token, user } = res.data;
           localStorage.setItem('ACCESS_TOKEN', access_token);
+          localStorage.setItem('USER', user);
           dispatch(loginUserSucces())
           navigate('/dashboard');
           //TO DO - notification for succes

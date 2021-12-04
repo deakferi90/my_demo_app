@@ -1,15 +1,12 @@
 import React, { useEffect } from "react";
-import { connect } from "react-redux";
-import { getModel } from "./selectors";
 import { useNavigate } from "react-router";
 
-const ProtectedPageTemplate = (props) => {
-    const { children, model } = props;
-    const { loginStatus } = model;
+const ProtectedPageTemplate = ({ children }) => {
     const navigate = useNavigate();
 
     useEffect(()=> {
-        if(!loginStatus) {
+        const user = localStorage.getItem('USER')
+        if(!user) {
             navigate('/');
         }
     });
@@ -21,11 +18,4 @@ const ProtectedPageTemplate = (props) => {
   );
 };
 
-const mapStateToProps = (state) => {
-    const model = getModel(state);
-    return {
-        model
-    };
-}
-
-export default connect(mapStateToProps, null)(ProtectedPageTemplate);
+export default ProtectedPageTemplate;
