@@ -6,10 +6,12 @@ import Home from './pages/Home';
 import About from './pages/about';
 import { Login } from './pages/login';
 import { Register } from './pages/register';
+import { Dashboard } from './pages/dashboard';
 import Table from './components/Table/TableComponent';
 import DetailsPage from './components/DetailsPage/DetailsPageComponent';
 import Service from './components/Service/ServiceComponent';
 import PageTemplate from './templates/PageTemplate';
+import ProtectedPageTemplate from './templates/ProtectedPageTemplate';
 import './App.css';
 
 
@@ -20,6 +22,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/register" element = {<Register />}/>
+          <Route path='/dashboard'element = {<ProtectedPageTemplate><Dashboard /></ProtectedPageTemplate>}/>
           <Route path="/home" element={<PageTemplate><Home /></PageTemplate>} />
           <Route path="/about" element={<PageTemplate><About /></PageTemplate>} />
           <Route path="/table-page" element={<PageTemplate><Table /></PageTemplate>} />

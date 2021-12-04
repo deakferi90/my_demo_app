@@ -1,24 +1,32 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import './style.scss';
 
-const LoginPage = (props) => {
-    const [userName, setUserName] = useState('');
+const LoginPage = ({loginUser}) => {
+    const navigate = useNavigate();
+    const [username, setUserName] = useState('');
     const [password, setPassword] = useState('');
     const [submitted, setSubmitted] = useState(false);
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setSubmitted(true);
+    const handleLogin = () => {
+        loginUser({username, password}, navigate);
     }
+
+    useEffect(() => {
+        const user = localStorage.getItem('USER');
+        if(user) {
+            navigate('/dashboard');
+        }
+    })
+
     return (
         <div className="login-container col-md-6 col-md-offset-3">
             <h2>Login</h2>
-            <form name="form" onSubmit={handleSubmit}>
-                <div className={'form-group' + (submitted && !userName ? ' has-error' : '')}>
+            <div>
+                <div className={'form-group' + (submitted && !username ? ' has-error' : '')}>
                     <label htmlFor="username">Username</label>
-                    <input type="text" className="form-control" name="username" value={userName} onChange={(e) => setUserName(e.target.value)} />
-                    {submitted && !userName &&
+                    <input type="text" className="form-control" name="username" value={username} onChange={(e) => setUserName(e.target.value)} />
+                    {submitted && !username &&
                         <div className="help-block">Username is required</div>
                     }
                 </div>
@@ -30,10 +38,10 @@ const LoginPage = (props) => {
                     }
                 </div>
                 <div className="form-group">
-                    <button className="btn btn-primary">Login</button>
+                    <button className="btn btn-primary" onClick={handleLogin}>Login</button>
                     <Link to="/register" className="btn btn-link">Register</Link>
                 </div>
-            </form>
+            </div>
         </div>
     );
 }
