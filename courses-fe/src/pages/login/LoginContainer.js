@@ -6,7 +6,7 @@ import { increment, decrement, loginUser } from "./actions";
 import LoginComponent from "./LoginComponent";
 
 class LoginContainer extends Component {
-  
+
   render() {
     return <LoginComponent {...this.props}/>;
   }

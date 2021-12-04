@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './style.scss';
 
@@ -11,6 +11,13 @@ const LoginPage = ({loginUser}) => {
     const handleLogin = () => {
         loginUser({username, password}, navigate);
     }
+
+    useEffect(() => {
+        const user = localStorage.getItem('USER');
+        if(user) {
+            navigate('/dashboard');
+        }
+    })
 
     return (
         <div className="login-container col-md-6 col-md-offset-3">
