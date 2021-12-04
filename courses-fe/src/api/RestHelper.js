@@ -1,10 +1,23 @@
 import axios from "axios";
 
-const base = "localhost:3000";
+const base = "http://localhost:3003";
 
 const axiosInstance = axios.create({
     baseURL: base
 });
+
+
+axiosInstance.interceptors.request.use(
+    (config) => {
+      config.headers.authorization = `Bearer ${localStorage.getItem(
+        "ACCESS_TOKEN",
+      )}`;
+      return config;
+    },
+    (error) => {
+      return Promise.reject(error);
+    },
+  );
 
 class RestHelper {
     constructor(instance) {
