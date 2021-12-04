@@ -24,7 +24,7 @@ class RestHelper {
         this.instance = instance;
     }
 
-    getUrl(url) {
+    get(url) {
         return this.instance.get(url);
     }
 
