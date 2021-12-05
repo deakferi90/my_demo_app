@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import DashboardComponent from "./DashboardComponent";
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { logOutUser } from './actions';
+import { logOutUser,  loadCats} from './actions';
+import { getModel } from './selectors';
 
 
 class DashboardContainer extends Component {
@@ -11,10 +12,18 @@ class DashboardContainer extends Component {
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapStateToProps = (state) => {
+    const model = getModel(state);
     return {
-        logOutUser: bindActionCreators(logOutUser, dispatch)
+        model
     };
 }
 
-export default connect(null, mapDispatchToProps)(DashboardContainer);
+const mapDispatchToProps = (dispatch) => {
+    return {
+        logOutUser: bindActionCreators(logOutUser, dispatch),
+        loadCats: bindActionCreators(loadCats, dispatch),
+    };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(DashboardContainer);
