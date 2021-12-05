@@ -15,10 +15,6 @@ const LoginPage = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setSubmitted(true);
-        //const { username, password } = this.state;
-        // if (userName && password) {
-        //     this.props.login(userName, password);
-        // }
     }
 
     //const { username, password, submitted } = this.state;
