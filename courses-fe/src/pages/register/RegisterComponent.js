@@ -1,9 +1,10 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useLoginCheck } from './helper';
 import './style.scss';
 
 const RegisterComponent = (props) => {
-
+    const navigate = useNavigate();
     const [submitted, setSubmitted] = useState(false);
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -11,14 +12,18 @@ const RegisterComponent = (props) => {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
 
-    const handleRegister = () => {
-        console.log('Register');
-        console.log('Name: ', name);
-        console.log('Email: ', email);
-        console.log('Username: ', username);
-        console.log('Password: ', password)
-        console.log('ConfirmPassword:', confirmPassword);
-    };
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        setSubmitted(true);
+        if (!name || !email || !username || !password || !confirmPassword) {
+            console.log('show me message');
+        } else {
+            console.log('registration completed');
+            navigate("/");
+        }
+    }
+
+    useLoginCheck(navigate);
 
     return (
         <Fragment>
@@ -57,13 +62,13 @@ const RegisterComponent = (props) => {
             <div className={'form-group' + (submitted && !confirmPassword ? ' has-error' : '')}>
                 <label htmlFor="password">Confirm Password</label>
                 <input type="password" className="form-control" name="confirmPassword" value={confirmPassword} onChange={(e) => {setConfirmPassword(e.target.value)}} />
-                {submitted && !password &&
+                {submitted && !confirmPassword &&
                     <div className="help-block">Password is required</div>
                 }
             </div>
             
             <div className="form-group">
-                <button className="btn btn-primary" onClick={handleRegister}>Register</button>
+                <button className="btn btn-primary" onClick={handleSubmit}>Register</button>
                 <Link to="/" className="btn btn-link">Login</Link>
             </div>
         </div>

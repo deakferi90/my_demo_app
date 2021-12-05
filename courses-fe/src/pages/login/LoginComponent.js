@@ -9,6 +9,16 @@ const LoginPage = ({loginUser}) => {
     const [password, setPassword] = useState('');
     const [submitted, setSubmitted] = useState(false);
 
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        setSubmitted(true);
+        if (username && password) {
+            navigate("/home");
+        } else {
+            console.log('error');
+        }
+    }
+
     const handleLogin = () => {
         loginUser({username, password}, navigate);
     }
@@ -34,7 +44,7 @@ const LoginPage = ({loginUser}) => {
                     }
                 </div>
                 <div className="form-group">
-                    <button className="btn btn-primary" onClick={handleLogin}>Login</button>
+                    <button className="btn btn-primary" onClick={handleSubmit}>Login</button>
                     <Link to="/register" className="btn btn-link">Register</Link>
                 </div>
             </div>
