@@ -44,7 +44,7 @@ const LoginPage = ({loginUser}) => {
                     }
                 </div>
                 <div className="form-group">
-                    <button className="btn btn-primary" onClick={handleSubmit}>Login</button>
+                    <button className="btn btn-primary" onClick={handleLogin}>Login</button>
                     <Link to="/register" className="btn btn-link">Register</Link>
                 </div>
             </div>

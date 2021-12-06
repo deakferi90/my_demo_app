@@ -16,5 +16,12 @@ class UserApi {
         const url = 'auth/logout/all';
         return RestHelper.post(url, {});
     }
+
+    register(userData) {
+        const url = 'auth/register';
+        return RestHelper.post(url, userData);
+    }
+
+    //register user functia necesara sa scriu
 }
 export default new UserApi();

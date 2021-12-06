@@ -21,7 +21,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     increment: bindActionCreators(increment, dispatch),
     decrement: bindActionCreators(decrement, dispatch),
-    loginUser: bindActionCreators(registerUser, dispatch)
+    registerUser: bindActionCreators(registerUser, dispatch)
   };
 };
 

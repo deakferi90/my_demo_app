@@ -1,9 +1,12 @@
 import React, { useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 
-const DashboardComponent = ({ logOutUser, model, loadCats }) => {
+const DashboardComponent = ({ logOutUser, model, loadCats, loadDogs }) => {
   const navigate = useNavigate();
   const { cats } = model;
+  console.log(cats);
+  const { dogs } = model;
+  console.log(dogs);
   
   const logoutFromAllDevices = () => {
     console.log('ASTA E PENTRU TINE FERY!!! :))))))');
@@ -17,8 +20,9 @@ const DashboardComponent = ({ logOutUser, model, loadCats }) => {
       <button onClick={() => logOutUser(navigate)}>This should log me out</button>
       <button onClick={logoutFromAllDevices}>Logout from all devices</button>
       <button onClick={loadCats}>Test Cats</button>
-      {cats.length === 0 && <p>there are no cats in the house</p>}
+      <button onClick={loadDogs}>Test Dogs</button>
       {cats.map((cat) => <p key={cat}>{cat}</p>)}
+      {dogs.map((dog) => <p key={dog}>{dog}</p>)}
     </div>
   );
 };
