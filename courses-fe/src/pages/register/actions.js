@@ -17,7 +17,7 @@ export const loginUserSucces = () => {
     return {type: actionTypes.LOGIN_USER};
   }
 
-export const  registerUser = (credentials, navigate) => {
+export const registerUser = (credentials, navigate) => {
     return async (dispatch) => {
       try {
           const res = await userApi.login(credentials);

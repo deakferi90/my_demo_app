@@ -5,7 +5,7 @@ const ProtectedPageTemplate = ({ children }) => {
     const navigate = useNavigate();
 
     useEffect(()=> {
-        const user = localStorage.getItem('USER')
+        const user = localStorage.getItem('USER');
         if(!user) {
             navigate('/');
         }

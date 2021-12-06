@@ -11,16 +11,10 @@ const RegisterComponent = (props) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
+    const { registerUser } = props;
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        setSubmitted(true);
-        if (!name || !email || !username || !password || !confirmPassword) {
-            console.log('show me message');
-        } else {
-            console.log('registration completed');
-            navigate("/");
-        }
+    const handleSubmit = () => {
+        registerUser({name, email, username, password}, navigate);
     }
 
     useLoginCheck(navigate);
