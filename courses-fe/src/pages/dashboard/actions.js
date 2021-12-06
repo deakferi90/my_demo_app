@@ -10,13 +10,28 @@ const loadCatsSucces = (cats) => {
   return {type: actionTypes.LOAD_CATS_SUCCESS, cats};
 }
 
+const loadDogsSucces = (dogs) => {
+  return {type: actionTypes.LOAD_DOGS_SUCCESS, dogs};
+}
+
 export const loadCats = () => {
   return (dispatch) => {
-    playTestApi.gerCats().then(res => {
+    playTestApi.getCats().then(res => {
       dispatch(loadCatsSucces(res.data.cats))
     }).catch(err => {
-      console.log('A aparut o eraore si arr trebui sa te logam din nou');
+      console.log('A aparut o eroare si ar trebui sa te logam din nou');
       dispatch(loadCatsSucces([]))
+    })
+  }
+}
+
+export const loadDogs = () => {
+  return (dispatch) => {
+    playTestApi.getDogs().then(res => {
+      dispatch(loadDogsSucces(res.data.dogs))
+    }).catch(err => {
+      console.log('A aparut o eroare si ar trebui sa te logam din nou');
+      dispatch(loadDogsSucces([]))
     })
   }
 }

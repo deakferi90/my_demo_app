@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import DashboardComponent from "./DashboardComponent";
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { logOutUser,  loadCats} from './actions';
+import { logOutUser, loadCats, loadDogs } from './actions';
 import { getModel } from './selectors';
 
 
@@ -23,6 +23,7 @@ const mapDispatchToProps = (dispatch) => {
     return {
         logOutUser: bindActionCreators(logOutUser, dispatch),
         loadCats: bindActionCreators(loadCats, dispatch),
+        loadDogs: bindActionCreators(loadDogs, dispatch),
     };
 }
 
