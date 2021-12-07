@@ -43,13 +43,13 @@ export const logOutUser = (navigate) => {
       .then((res) => {
         localStorage.removeItem('USER');
         localStorage.removeItem('ACCESS_TOKEN');
-        navigate("/");
+        navigate("/login");
         dispatch(logOutUserSuccess());
       })
       .catch((err) => {
         localStorage.removeItem('USER');
         localStorage.removeItem('ACCESS_TOKEN');
-        navigate("/");
+        navigate("/login");
         dispatch(logOutUserSuccess());
       });
   };
