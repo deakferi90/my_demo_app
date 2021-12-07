@@ -59,19 +59,3 @@ export const logOutUser = (navigate) => {
   };
 };
 
-export const logInUser = (navigate) => {
-  return async (dispatch) => {
-    await userApi
-      .login()
-      .then((res) => {
-        navigate("/home");
-        dispatch(logInUserSuccess());
-      })
-      .catch((err) => {
-        localStorage.removeItem('USER');
-        localStorage.removeItem('ACCESS_TOKEN');
-        navigate("/home");
-        dispatch(logInUserSuccess());
-      });
-  };
-};
