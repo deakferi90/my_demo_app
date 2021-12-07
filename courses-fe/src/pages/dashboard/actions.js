@@ -6,6 +6,10 @@ const logOutUserSuccess = () => {
   return { type: actionTypes.LOGOUT_USER };
 };
 
+const logInUserSuccess = () => {
+  return { type: actionTypes.LOGIN_USER };
+};
+
 const loadCatsSucces = (cats) => {
   return {type: actionTypes.LOAD_CATS_SUCCESS, cats};
 }
@@ -51,6 +55,23 @@ export const logOutUser = (navigate) => {
         localStorage.removeItem('ACCESS_TOKEN');
         navigate("/login");
         dispatch(logOutUserSuccess());
+      });
+  };
+};
+
+export const logInUser = (navigate) => {
+  return async (dispatch) => {
+    await userApi
+      .login()
+      .then((res) => {
+        navigate("/home");
+        dispatch(logInUserSuccess());
+      })
+      .catch((err) => {
+        localStorage.removeItem('USER');
+        localStorage.removeItem('ACCESS_TOKEN');
+        navigate("/home");
+        dispatch(logInUserSuccess());
       });
   };
 };

@@ -20,8 +20,9 @@ function App() {
     <div>
       <Router>
         <Routes>
+          <Route path="/login" element={<Login />} />
           <Route path="/register" element = {<Register />}/>
-          <Route path='/dashboard'element = {<ProtectedPageTemplate><Dashboard /></ProtectedPageTemplate>}/>
+          <Route path="/dashboard" element = {<ProtectedPageTemplate><Dashboard /></ProtectedPageTemplate>}/>
           <Route path="/home" element={<PageTemplate><Home /></PageTemplate>} />
           <Route path="/about" element={<PageTemplate><About /></PageTemplate>} />
           <Route path="/table-page" element={<PageTemplate><Table /></PageTemplate>} />
