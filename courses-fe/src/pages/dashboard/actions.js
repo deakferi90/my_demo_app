@@ -6,6 +6,10 @@ const logOutUserSuccess = () => {
   return { type: actionTypes.LOGOUT_USER };
 };
 
+const logInUserSuccess = () => {
+  return { type: actionTypes.LOGIN_USER };
+};
+
 const loadCatsSucces = (cats) => {
   return {type: actionTypes.LOAD_CATS_SUCCESS, cats};
 }
@@ -43,14 +47,15 @@ export const logOutUser = (navigate) => {
       .then((res) => {
         localStorage.removeItem('USER');
         localStorage.removeItem('ACCESS_TOKEN');
-        navigate("/");
+        navigate("/login");
         dispatch(logOutUserSuccess());
       })
       .catch((err) => {
         localStorage.removeItem('USER');
         localStorage.removeItem('ACCESS_TOKEN');
-        navigate("/");
+        navigate("/login");
         dispatch(logOutUserSuccess());
       });
   };
 };
+
