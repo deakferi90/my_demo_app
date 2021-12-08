@@ -24,7 +24,7 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element = {<Register />}/>
-          <Route path="/" element = {}/>
+          <Route path="/" element = {<LandingPage/>}/>
           <Route path="/dashboard" element = {<ProtectedPageTemplate><Dashboard /></ProtectedPageTemplate>}/>
           <Route path="/home" element={<PageTemplate><Home /></PageTemplate>} />
           <Route path="/about" element={<PageTemplate><About /></PageTemplate>} />
