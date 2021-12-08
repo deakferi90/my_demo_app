@@ -9,16 +9,6 @@ const LoginPage = ({loginUser}) => {
     const [password, setPassword] = useState('');
     const [submitted, setSubmitted] = useState(false);
 
-    // const handleSubmit = (event) => {
-    //     event.preventDefault();
-    //     setSubmitted(true);
-    //     if (username && password) {
-    //         navigate("/home");
-    //     } else {
-    //         console.log('error');
-    //     }
-    // }
-
     const handleLogin = () => {
         loginUser({username, password}, navigate);
     }
