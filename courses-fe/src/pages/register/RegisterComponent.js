@@ -15,6 +15,7 @@ const RegisterComponent = (props) => {
 
     const handleSubmit = () => {
         registerUser({name, email, username, password}, navigate);
+        setSubmitted();
     }
 
     useLoginCheck(navigate);

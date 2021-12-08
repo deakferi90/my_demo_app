@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import './styles.scss';
 import Home from './pages/Home';
 import About from './pages/about';
+import { LandingPage } from './pages/landingPage';
 import { Login } from './pages/login';
 import { Register } from './pages/register';
 import { Dashboard } from './pages/dashboard';
@@ -23,6 +24,7 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element = {<Register />}/>
+          <Route path="/landing-page" element = {<PageTemplate><LandingPage /></PageTemplate>}/>
           <Route path="/dashboard" element = {<ProtectedPageTemplate><Dashboard /></ProtectedPageTemplate>}/>
           <Route path="/home" element={<PageTemplate><Home /></PageTemplate>} />
           <Route path="/about" element={<PageTemplate><About /></PageTemplate>} />
