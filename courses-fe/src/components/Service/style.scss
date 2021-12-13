@@ -1,0 +1,10 @@
+.increment, .decrement {
+    color: #fff !important;
+    margin-right: 5px;
+    border: none;
+    background-color: #000 !important;
+
+    &:focus {
+        display: none;
+    }
+}

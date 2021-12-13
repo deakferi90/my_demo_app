@@ -10,7 +10,7 @@ const Header = () => {
             <Nav className="me-auto">
               <Nav.Link href="/home">Home</Nav.Link>
               <Nav.Link href="/landing-page">Landing Page</Nav.Link>
-              <Nav.Link href="/highchart">Highcharts</Nav.Link>
+              <Nav.Link href="/highcharts">Highcharts</Nav.Link>
               <Nav.Link href="/table-page">Dynamic Table Page</Nav.Link>
               <Nav.Link href="/dashboard">Dashboard</Nav.Link>
               <Nav.Link href="/details-page">Details Page</Nav.Link>
