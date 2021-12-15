@@ -19,3 +19,17 @@
     margin-top: 15px;
     margin-left: 20px;
 }
+
+.slick-slider {
+    background: blue;
+    color: #fff;
+
+    .slick-prev {
+        left: 3% !important;
+        z-index: 1;
+      }
+      .slick-next {
+        right: 3% !important;
+        z-index: 1;
+      }
+}

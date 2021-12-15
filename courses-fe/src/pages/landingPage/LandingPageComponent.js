@@ -1,11 +1,27 @@
 import React from 'react';
+import './style.scss';
+import renderSlides from './names';
 
-export const LandingPage = ({}) => {
-    return (
-        <div className="login-container col-md-6 col-md-offset-3">
-            <h2>This is the LandingPage</h2>
-        </div>
-    );
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+import Slider from "react-slick";
+
+export const LandingPage = () => {
+
+  return (
+    <div className="App">
+      <Slider
+        dots={false}
+        slidesToShow={1}
+        slidesToScroll={1}
+        autoplay={false}
+        backgroundColor={'blue'}
+      >
+        {renderSlides()}
+      </Slider>
+    </div>
+  );
 }
 
 export default LandingPage;
