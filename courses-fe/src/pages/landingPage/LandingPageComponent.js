@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.scss';
-import renderSlides from './names';
+import renderSlides from './helper';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
