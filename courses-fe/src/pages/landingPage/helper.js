@@ -1,7 +1,11 @@
+import names from './names';
+
 export const renderSlides = () =>
-[1, 2, 3, 4, 5, 6, 7, 8].map(num => (
+names.map((person) => (
   <div>
-    <h3>Slide {num}</h3>
+    <h1>{person.name}</h1>
+    <div>{person.model}</div>
+    <div>{person.text}</div>
   </div>
 ));
 export default renderSlides;
