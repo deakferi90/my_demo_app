@@ -1,0 +1,39 @@
+.slick-slider {
+    background: #4fc5b6;
+    color: #fff;
+    height: 400px;
+    width: 750px;
+    margin: 0 auto;
+
+    .slick-prev {
+        left: 0% !important;
+        z-index: 1;
+        &::before {
+            font-size: 50px;
+            position: absolute;
+            left: 50%;
+        }
+      }
+      .slick-next {
+        right: 0% !important;
+        z-index: 1;
+        &::before {
+            font-size: 50px;
+            position: absolute;
+            right: 50%;
+        }
+      }
+}
+
+.image {
+  border-radius: 50%;
+  margin-top: -30px;
+  margin-left: 20px;
+  width: 150px;
+  height: 150px;
+}
+
+.text {
+  width: 85%;
+  margin: 0 auto;
+}

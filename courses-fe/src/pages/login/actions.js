@@ -21,7 +21,7 @@ export const  loginUser = (credentials, navigate) => {
           localStorage.setItem('ACCESS_TOKEN', access_token);
           localStorage.setItem('USER', user);
           dispatch(loginUserSucces())
-          navigate('/landing-page');
+          navigate('/landing-page')
           //TO DO - notification for succes
       }catch(err) {
         // TO DO - notification for error

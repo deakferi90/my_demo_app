@@ -32,7 +32,7 @@ function App() {
           <Route path="/details-page" element={<PageTemplate><DetailsPage /></PageTemplate>} />
           <Route path="/service" element={<PageTemplate><Service /></PageTemplate>} />
           <Route path="/highcharts" element={<PageTemplate><HighCharts /></PageTemplate>} />
-          <Route path="*" element={<Navigate to ="/login" />} />
+          <Route path="/" element={<Navigate to ="/login" />} />
         </Routes>
       </Router>
     </div>
