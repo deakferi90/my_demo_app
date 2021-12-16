@@ -1,5 +1,4 @@
 import names from './names';
-import panda from '../../icons/eper.png';
 
 export const renderSlides = () =>
 names.map((person) => {

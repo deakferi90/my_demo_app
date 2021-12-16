@@ -1,6 +1,3 @@
-import panda from '../../icons/eper.png';
-import rest from '../../icons/resthelper.png';
-
 export const names = [
     {
         name: "Alex",
