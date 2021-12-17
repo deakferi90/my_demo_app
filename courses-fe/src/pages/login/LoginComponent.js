@@ -48,7 +48,10 @@ const LoginPage = ({loginUser}) => {
                     <Link to="/register" className="btn btn-link">Register</Link>
                 </div>
             </div>
-            <ToastContainer autoClose={2000}/>
+            <ToastContainer
+                autoClose={2000}
+                hideProgressBar={true}
+            />
         </div>
     );
 }
