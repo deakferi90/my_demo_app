@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useLoginCheck } from './helper';
 import './style.scss';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const LoginPage = ({loginUser}) => {
     const navigate = useNavigate();
@@ -9,9 +11,16 @@ const LoginPage = ({loginUser}) => {
     const [password, setPassword] = useState('');
     const [submitted, setSubmitted] = useState(false);
 
+    const notify = () => toast("Incorrect username or password !");
+
     const handleLogin = () => {
         setSubmitted(true);
         loginUser({username, password}, navigate);
+    }
+
+    const onClick = () => {
+        handleLogin();
+        notify();
     }
 
     useLoginCheck(navigate);
@@ -35,10 +44,11 @@ const LoginPage = ({loginUser}) => {
                     }
                 </div>
                 <div className="form-group">
-                    <button className="btn btn-primary" onClick={handleLogin}>Login</button>
+                    <button className="btn btn-primary" onClick={onClick}>Login</button>
                     <Link to="/register" className="btn btn-link">Register</Link>
                 </div>
             </div>
+            <ToastContainer autoClose={2000}/>
         </div>
     );
 }
