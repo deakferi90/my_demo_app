@@ -10,6 +10,7 @@ const LoginPage = ({loginUser}) => {
     const [submitted, setSubmitted] = useState(false);
 
     const handleLogin = () => {
+        setSubmitted(true);
         loginUser({username, password}, navigate);
     }
 
