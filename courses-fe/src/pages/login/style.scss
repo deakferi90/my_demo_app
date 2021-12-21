@@ -40,3 +40,18 @@
   top: 0;
   left: 0;
 }
+
+.Toastify {
+  position: absolute;
+  top: 0;
+}
+
+.Toastify__toast-theme--light {
+  background: red !important;
+  color: #fff !important;
+}
+
+.Toastify__close-button > svg {
+  fill: #fff !important;
+  z-index: 3;
+}
