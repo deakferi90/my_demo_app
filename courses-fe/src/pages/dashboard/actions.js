@@ -6,9 +6,9 @@ const logOutUserSuccess = () => {
   return { type: actionTypes.LOGOUT_USER };
 };
 
-const logInUserSuccess = () => {
-  return { type: actionTypes.LOGIN_USER };
-};
+// const logInUserSuccess = () => {
+//   return { type: actionTypes.LOGIN_USER };
+// };
 
 const loadCatsSucces = (cats) => {
   return {type: actionTypes.LOAD_CATS_SUCCESS, cats};

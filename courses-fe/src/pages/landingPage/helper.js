@@ -5,7 +5,7 @@ names.map((person) => {
   return (
   <div>
     <h1>{person.name}</h1>
-    <div><img className='image' src={person.src}/></div>
+    <div><img className='image' alt='' src={person.src}/></div>
     <div className='text'>{person.text}</div>
   </div>
 )});

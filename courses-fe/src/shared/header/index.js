@@ -1,10 +1,11 @@
 import React from "react";
 import { Container, Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import './style.scss';
 
 const Header = () => {
     return (
         <Navbar className="color-nav" variant="light" expand="lg">
-        <Container>
+        <Container className="navbar-container">
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
@@ -26,6 +27,7 @@ const Header = () => {
             </Nav>
           </Navbar.Collapse>
         </Container>
+        <Nav.Link className="logout-btn" href="/login">Logout</Nav.Link>
       </Navbar>
     );
 }
