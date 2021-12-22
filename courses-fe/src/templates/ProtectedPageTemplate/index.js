@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router";
+import Header from "../../shared/header";
 
 const ProtectedPageTemplate = ({ children }) => {
     const navigate = useNavigate();
@@ -12,7 +13,7 @@ const ProtectedPageTemplate = ({ children }) => {
     });
   return (
     <React.Fragment>
-      <h1>My protected header</h1>
+      <Header />
       {children}
     </React.Fragment>
   );
