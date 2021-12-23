@@ -4,7 +4,7 @@ export const useLoginCheck = (navigate) => {
     useEffect(() => {
         const user = localStorage.getItem('USER');
         if(user) {
-            navigate('/landing-page');
+            //navigate('/landing-page');
         }
     });
 }
