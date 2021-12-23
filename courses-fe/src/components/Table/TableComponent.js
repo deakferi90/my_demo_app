@@ -69,7 +69,7 @@ const TableComponent = () => {
           } else if (val.lastName.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())) {
             return val;
           };
-          
+          return false;
         }).map((contact) => (
           <tr>
             <td key="uniqueKey1">{contact.email}</td>
