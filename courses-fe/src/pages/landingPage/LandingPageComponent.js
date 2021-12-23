@@ -9,7 +9,7 @@ import Slider from "react-slick";
 
 export const LandingPage = () => {
   return (
-    <div key='' className="App">
+    <div className="App">
       <div className='first-box'>
         <div className='title-description'>
           <h1>Dezvoltati potentialul de programator</h1>
