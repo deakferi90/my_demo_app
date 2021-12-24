@@ -11,7 +11,6 @@ import { Dashboard } from './pages/dashboard';
 import Table from './components/Table/TableComponent';
 import DetailsPage from './components/DetailsPage/DetailsPageComponent';
 import Service from './components/Service/ServiceComponent';
-//import ProtectedProtectedPageTemplate from './templates/ProtectedProtectedPageTemplate';
 import ProtectedPageTemplate from './templates/ProtectedPageTemplate';
 import HighCharts from './pages/Highchart/HighchartsComponent';
 import './App.css';
