@@ -114,3 +114,10 @@ form {
     bottom: 10px;
     left: 10px;
 }
+
+.switch-info-container {
+    display: flex;
+    .info-icon {
+        margin-left: 5px;
+    }
+}
