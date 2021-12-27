@@ -1,9 +1,9 @@
 import React, { Fragment, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useLoginCheck } from './helper';
+import { useRegisterCheck } from './helper';
 import './style.scss';
 
-const RegisterComponent = (props) => {
+const RegisterComponent = ({registerUser}) => {
     const navigate = useNavigate();
     const [submitted, setSubmitted] = useState(false);
     const [name, setName] = useState('');
@@ -11,14 +11,12 @@ const RegisterComponent = (props) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-    const { registerUser } = props;
 
     const handleSubmit = () => {
-        registerUser({name, email, username, password}, navigate);
-        setSubmitted();
+        setSubmitted(true);
+        registerUser({name, email, username, password, confirmPassword}, navigate);
     }
-
-    useLoginCheck(navigate);
+    useRegisterCheck(navigate);
 
     return (
         <Fragment>

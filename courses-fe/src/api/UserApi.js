@@ -21,7 +21,5 @@ class UserApi {
         const url = 'auth/register';
         return RestHelper.post(url, userData);
     }
-
-    //register user functia necesara sa scriu
 }
 export default new UserApi();
