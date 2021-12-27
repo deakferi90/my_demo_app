@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useRegisterCheck } from './helper';
 import './style.scss';
@@ -12,14 +12,15 @@ const RegisterComponent = ({registerUser}) => {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
         setSubmitted(true);
         registerUser({name, email, username, password, confirmPassword}, navigate);
     }
     useRegisterCheck(navigate);
 
     return (
-        <Fragment>
+        <form onSubmit={handleSubmit}>
         <div className="register-container col-md-6 col-md-offset-3">
         <h2>Register</h2>
         <div>
@@ -61,12 +62,12 @@ const RegisterComponent = ({registerUser}) => {
             </div>
             
             <div className="form-group">
-                <button className="btn btn-primary" onClick={handleSubmit}>Register</button>
+                <button className="btn btn-primary">Register</button>
                 <Link to="/" className="btn btn-link">Login</Link>
             </div>
         </div>
     </div>
-    </Fragment>
+    </form>
     );
 }
 
