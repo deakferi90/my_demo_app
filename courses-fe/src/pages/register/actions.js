@@ -6,7 +6,6 @@ export const registerUserSucess = () => {
 }
 
 export const registerUser = (userData, navigate) => {
-  console.log(userData);
     return async (dispatch) => {
       try {
           const res = await userApi.register(userData);

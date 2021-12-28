@@ -17,9 +17,9 @@ class UserApi {
         return RestHelper.post(url, {});
     }
 
-    register(userData) {
+    register(data) {
         const url = 'auth/register';
-        return RestHelper.post(url, userData);
+        return RestHelper.post(url, data);
     }
 }
 export default new UserApi();
