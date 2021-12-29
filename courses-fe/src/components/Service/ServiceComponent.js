@@ -20,7 +20,8 @@ const ServiceComponent = () => {
         <button onClick={() => { setCount(count + 1) }}>+</button>
         <button onClick={() => { setCount(count - 1) }} >-</button>
       </div>
-      <div>
+      <div className='api-data'>
+        <p>This is just plain API data</p>
         <p>{randomUSerDataJSON}</p>
       </div>
     </div>
