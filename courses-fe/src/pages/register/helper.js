@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 
-export const useLoginCheck = (navigate) => {
+export const useRegisterCheck = (navigate) => {
     useEffect(() => {
         const user = localStorage.getItem('USER');
         if(user) {
-            navigate('/home');
+            navigate('/login');
         }
     });
 }

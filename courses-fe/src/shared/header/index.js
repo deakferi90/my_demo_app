@@ -18,7 +18,6 @@ const Header = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link href="/home">Home</Nav.Link>
-              <Nav.Link href="/landing-page">Landing Page</Nav.Link>
               <Nav.Link href="/highcharts">Highcharts</Nav.Link>
               <Nav.Link href="/table-page">Dynamic Table Page</Nav.Link>
               <Nav.Link href="/dashboard">Dashboard</Nav.Link>
