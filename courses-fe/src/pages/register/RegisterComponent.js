@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useRegisterCheck } from './helper';
+import { ToastContainer, toast } from 'react-toastify';
 import './style.scss';
 
 const RegisterComponent = ({ registerUser }) => {
@@ -11,12 +11,15 @@ const RegisterComponent = ({ registerUser }) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
+    const notify = () => toast("User successfully registered!");
+
     const handleSubmit = (e) => {
         e.preventDefault();
         setSubmitted(true);
         registerUser({ name, email, username, password }, navigate);
+        notify();
+        setTimeout(() => navigate('/login'), 2000);
     }
-    useRegisterCheck(navigate);
 
     return (
         <form onSubmit={handleSubmit}>
@@ -57,6 +60,11 @@ const RegisterComponent = ({ registerUser }) => {
                     </div>
                 </div>
             </div>
+            <ToastContainer
+                className='success-toast'
+                autoClose={2000}
+                hideProgressBar={true}
+            />
         </form>
     );
 }
