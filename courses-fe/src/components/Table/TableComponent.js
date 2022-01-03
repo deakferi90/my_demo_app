@@ -54,7 +54,7 @@ const TableComponent = () => {
   return <div>
     <div className='switch-info-container'>
     <Switch onChange={() => setChecked(!checked)} checked={checked} />
-    <div className='info-icon' data-tip={checked ? "to hide table switch to left" : "switch to right to show table"}><FaBeer /><ReactTooltip /></div>
+    <div className='info-icon' data-tip={checked ? "to hide table switch to left" : "switch to right to show table"}>{!checked ? <FaBeer /> : null}<ReactTooltip /></div>
     </div>
     { checked ? <div className='table-page-container'>
       <div className="input-container"><input type="text" onChange={(e) => setSearchTerm(e.target.value)} placeholder="Search by..." /></div>
