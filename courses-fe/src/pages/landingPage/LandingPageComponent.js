@@ -34,6 +34,7 @@ export const LandingPage = () => {
         <div className='hero-side hero-image'><div className='image-cover'></div></div>
       </div>
       <div className='slider-container'>
+      <h1>Invata bazele</h1>
         <Slider {...settings}>
           {renderSlides()}
         </Slider>

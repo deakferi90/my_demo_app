@@ -1,7 +1,6 @@
 .slick-slider {
     color: #fff;
     height: 400px;
-    width: 80%;
     margin: 0 auto;
 
     .slick-prev {
@@ -208,11 +207,17 @@
 }
 
 .slider-container {
+  max-width: 1440px;
+  margin: 0 auto;
   margin-top: 50px;
+  h1 {
+    font-weight: lighter;
+    padding-left: 50px;
+  }
 }
 
 .slider-inside-component {
-  padding-top: 120px;
+  padding-top: 60px;
   .title {
     width: 100px;
     height: 100px;
