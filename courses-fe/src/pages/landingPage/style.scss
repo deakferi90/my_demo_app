@@ -1,5 +1,4 @@
 .slick-slider {
-    background: #4fc5b6;
     color: #fff;
     height: 400px;
     width: 80%;
@@ -12,6 +11,7 @@
             font-size: 50px;
             position: absolute;
             left: 50%;
+            color: #4fc5b6;
         }
       }
       .slick-next {
@@ -21,6 +21,7 @@
             font-size: 50px;
             position: absolute;
             right: 50%;
+            color: #4fc5b6;
         }
       }
 }
@@ -206,14 +207,29 @@
   }
 }
 
+.slider-container {
+  margin-top: 50px;
+}
 
-// .name-card-data {
-//   width: 250px;
-//   height: 300px;
-//   box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
-//   margin-bottom: 20px;
-//   margin-right: 20px;
-//   cursor: pointer;
-// }
-
+.slider-inside-component {
+  padding-top: 120px;
+  .title {
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    background: #000;
+    line-height: 100px;
+    margin: 0 auto;
+  }
+  .text-cont {
+      color: #000;
+      background: #fff;
+      width: 50%;
+      margin: 0 auto;
+      .subtitle {
+        font-size: 30px;
+        color: chocolate;
+      }
+  }
+}
 

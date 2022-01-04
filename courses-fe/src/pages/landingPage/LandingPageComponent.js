@@ -12,7 +12,7 @@ export const LandingPage = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: 3,
     slidesToScroll: 1
   };
   return (
@@ -33,9 +33,11 @@ export const LandingPage = () => {
         </div>
         <div className='hero-side hero-image'><div className='image-cover'></div></div>
       </div>
-      <Slider {...settings}>
+      <div className='slider-container'>
+        <Slider {...settings}>
           {renderSlides()}
         </Slider>
+      </div>
       {/* <Slider
         dots={false}
         slidesToShow={4}

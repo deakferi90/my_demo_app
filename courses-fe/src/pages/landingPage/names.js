@@ -1,26 +1,47 @@
 export const names = [
     {
-        title: "1",
+        number: "1",
+        subtitle: "React.js",
         text: "Invata sa construiesti un single page application de la zero"
     },
     {
-        title: "2",
+        number: "2",
+        subtitle: "React.js",
         text: "Invata sa construiesti un single page application de la zero"
     },
     {
-        title: "3",
+        number: "3",
+        subtitle: "React.js",
         text: "Invata sa construiesti un single page application de la zero"
     },
     {
-        title: "4",
+        number: "4",
+        subtitle: "React.js",
         text: "Invata sa construiesti un single page application de la zero"
     },
     {
-        title: "5",
+        number: "5",
+        subtitle: "React.js",
         text: "Invata sa construiesti un single page application de la zero"
     },
     {
-        title: "6",
+        number: "6",
+        subtitle: "React.js",
+        text: "Invata sa construiesti un single page application de la zero"
+    },
+    {
+        number: "7",
+        subtitle: "React.js",
+        text: "Invata sa construiesti un single page application de la zero"
+    },
+    {
+        number: "8",
+        subtitle: "React.js",
+        text: "Invata sa construiesti un single page application de la zero"
+    },
+    {
+        number: "9",
+        subtitle: "React.js",
         text: "Invata sa construiesti un single page application de la zero"
     },
 ];
