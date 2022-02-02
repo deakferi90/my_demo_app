@@ -13,6 +13,7 @@ import DetailsPage from './components/DetailsPage/DetailsPageComponent';
 import Service from './components/Service/ServiceComponent';
 import ProtectedPageTemplate from './templates/ProtectedPageTemplate';
 import HighCharts from './pages/Highchart/HighchartsComponent';
+import InterviewComponent from './components/Interview/InterviewComponent';
 import './App.css';
 
 
@@ -30,6 +31,7 @@ function App() {
           <Route path="/details-page" element={<ProtectedPageTemplate><DetailsPage /></ProtectedPageTemplate>} />
           <Route path="/service" element={<ProtectedPageTemplate><Service /></ProtectedPageTemplate>} />
           <Route path="/highcharts" element={<ProtectedPageTemplate><HighCharts /></ProtectedPageTemplate>} />
+          <Route path="/interview" element={<ProtectedPageTemplate><InterviewComponent /></ProtectedPageTemplate>} />
           <Route path="/" element = {<LandingPage />} />
         </Routes>
       </Router>

@@ -30,3 +30,22 @@
         background: black !important;
     }
 }
+
+#saveBtn {
+    color: honeydew !important;
+    background: orange !important;
+    &:hover {
+        background: red !important;
+    }
+}
+
+.modal-body {
+    display: contents;
+    > div {
+        margin: 10px auto;
+
+        label, input {
+            display: block;
+        }
+    }
+}
