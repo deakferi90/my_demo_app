@@ -1,26 +1,26 @@
 .slick-slider {
-    background: #4fc5b6;
     color: #fff;
     height: 400px;
-    width: 750px;
     margin: 0 auto;
 
     .slick-prev {
-        left: 0% !important;
+        left: 2% !important;
         z-index: 1;
         &::before {
             font-size: 50px;
             position: absolute;
             left: 50%;
+            color: #4fc5b6;
         }
       }
       .slick-next {
-        right: 0% !important;
+        right: 2% !important;
         z-index: 1;
         &::before {
             font-size: 50px;
             position: absolute;
             right: 50%;
+            color: #4fc5b6;
         }
       }
 }
@@ -49,6 +49,10 @@
     width: 50%;
     color: #fff;
     height: auto;
+    background: url(../../images/herobg.jpg) center center no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: #4fc5b6;
 
     h3 {
       margin-top: 10%;
@@ -60,10 +64,10 @@
       min-width: 100%;
     }
   }
-  .button-contaner {
-    position: absolute;
-    right: 60%;
-    bottom: 50px;
+  .button-container {
+    margin-top: 50px;
+    margin-right: 60%;
+    margin-bottom: 50px;
 
     a {
       margin-left: 20px;
@@ -97,3 +101,140 @@
     }
   }
 }
+
+.hero-container {
+  background: #4fc5b6;
+  color: #fff;
+  height: 650px;
+}
+
+.hero-container {
+  display: flex;
+
+  .hero-side {
+    width: 50%;
+    position: relative;
+    &.hero-image {
+      background: url(../../images/herobg.jpg); 
+      background-size: cover;
+      background-blend-mode: multiply;
+
+      .image-cover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba(79,197,182,.5);
+      }
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 720px;
+      display: inline-block;
+      h1 {
+        font-size: 70px;
+        font-weight: 100;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        margin: 30px 0;
+        margin-top: 130px;
+      }
+      h2 {
+        color: #fff;
+        font-size: 36px;
+        font-weight: lighter;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@mixin buttonProperties {
+  height: 40px;
+  width: 180px;
+  color: #fff;
+  line-height: 36px;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50px;
+  text-decoration: none;
+  &:hover {
+    color: #fff;
+  }
+}
+
+.login-btn {
+  @include buttonProperties;
+  border: 2px solid #000;
+  margin-left: 20px;
+  color: #000;
+
+  &:hover {
+    color: #000;
+  }
+}
+
+.register-btn {
+  @include buttonProperties;
+  background: #d63031;
+  color: #fff;
+  border: 2px solid #d63031;
+}
+
+.title-description-text {
+  .button-container {
+    margin-top: 100px;
+  }
+}
+
+.container {
+  padding: 40px;
+  background: #419be0;
+}
+
+.slick-slide {
+  text-align: center;
+  img {
+    margin: auto;
+  }
+}
+
+.slider-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-top: 50px;
+  h1 {
+    font-weight: lighter;
+    padding-left: 50px;
+  }
+}
+
+.slider-inside-component {
+  padding-top: 60px;
+  .title {
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    background: #4fc5b6;
+    line-height: 100px;
+    margin: 0 auto;
+  }
+  .text-cont {
+      color: #000;
+      background: #fff;
+      width: 50%;
+      margin: 0 auto;
+      .subtitle {
+        font-size: 30px;
+        color: chocolate;
+      }
+  }
+}
+
