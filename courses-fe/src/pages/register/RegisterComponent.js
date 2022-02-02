@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
+import { useRegisterCheck } from './helper';
 import './style.scss';
 
 const RegisterComponent = ({ registerUser }) => {
@@ -11,15 +12,20 @@ const RegisterComponent = ({ registerUser }) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
+
     const notify = () => toast("User successfully registered!");
 
     const handleSubmit = (e) => {
         e.preventDefault();
         setSubmitted(true);
         registerUser({ name, email, username, password }, navigate);
+
         notify();
         setTimeout(() => navigate('/login'), 2000);
     }
+    }
+    useRegisterCheck(navigate);
+
 
     return (
         <form onSubmit={handleSubmit}>
@@ -59,7 +65,6 @@ const RegisterComponent = ({ registerUser }) => {
                         <Link to="/" className="btn btn-link">Login</Link>
                     </div>
                 </div>
-            </div>
             <ToastContainer
                 className='success-toast'
                 autoClose={2000}

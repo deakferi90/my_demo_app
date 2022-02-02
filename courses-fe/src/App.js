@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import './styles.scss';
 import Home from './pages/Home';
@@ -11,9 +11,9 @@ import { Dashboard } from './pages/dashboard';
 import Table from './components/Table/TableComponent';
 import DetailsPage from './components/DetailsPage/DetailsPageComponent';
 import Service from './components/Service/ServiceComponent';
-//import PageTemplate from './templates/PageTemplate';
 import ProtectedPageTemplate from './templates/ProtectedPageTemplate';
 import HighCharts from './pages/Highchart/HighchartsComponent';
+import InterviewComponent from './components/Interview/InterviewComponent';
 import './App.css';
 
 
@@ -24,7 +24,6 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element = {<Register />}/>
-          <Route path="*" element = {<ProtectedPageTemplate><LandingPage /></ProtectedPageTemplate>}/>
           <Route path="/dashboard" element = {<ProtectedPageTemplate><Dashboard /></ProtectedPageTemplate>}/>
           <Route path="/home" element={<ProtectedPageTemplate><Home /></ProtectedPageTemplate>} />
           <Route path="/about" element={<ProtectedPageTemplate><About /></ProtectedPageTemplate>} />
@@ -32,7 +31,8 @@ function App() {
           <Route path="/details-page" element={<ProtectedPageTemplate><DetailsPage /></ProtectedPageTemplate>} />
           <Route path="/service" element={<ProtectedPageTemplate><Service /></ProtectedPageTemplate>} />
           <Route path="/highcharts" element={<ProtectedPageTemplate><HighCharts /></ProtectedPageTemplate>} />
-          <Route path="/" element={<Navigate to ="/login" />} />
+          <Route path="/interview" element={<ProtectedPageTemplate><InterviewComponent /></ProtectedPageTemplate>} />
+          <Route path="/" element = {<LandingPage />} />
         </Routes>
       </Router>
     </div>

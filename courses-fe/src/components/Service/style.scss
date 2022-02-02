@@ -8,3 +8,17 @@
         display: none;
     }
 }
+
+.api-data {
+    border: 2px solid blueviolet;
+    border-radius: 10px;
+    width: 50%;
+    margin: 0 auto;
+
+    p {
+        color: black;
+        &:nth-of-type(1) {
+            font-weight: bold;
+        }
+    }
+}

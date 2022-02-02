@@ -1,7 +1,5 @@
 import React from "react";
 import { Container, Navbar, Nav, NavDropdown } from 'react-bootstrap';
-//import { useNavigate } from 'react-router-dom';
-//import { logOutUser } from './actions';
 import './style.scss';
 
 const Header = () => {
@@ -18,13 +16,13 @@ const Header = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link href="/home">Home</Nav.Link>
-              <Nav.Link href="/landing-page">Landing Page</Nav.Link>
               <Nav.Link href="/highcharts">Highcharts</Nav.Link>
               <Nav.Link href="/table-page">Dynamic Table Page</Nav.Link>
               <Nav.Link href="/dashboard">Dashboard</Nav.Link>
               <Nav.Link href="/details-page">Details Page</Nav.Link>
               <Nav.Link href="/service">Service</Nav.Link>
               <Nav.Link href="/about">About</Nav.Link>
+              <Nav.Link href="/interview">Interview</Nav.Link>
               <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>

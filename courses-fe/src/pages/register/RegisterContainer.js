@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { getModel } from "./selectors";
-import { increment, decrement, registerUser } from "./actions";
+import { registerUser } from "./actions";
 import RegisterComponent from "./RegisterComponent";
 
 class RegisterContainer extends Component {
@@ -19,8 +19,6 @@ const mpStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    increment: bindActionCreators(increment, dispatch),
-    decrement: bindActionCreators(decrement, dispatch),
     registerUser: bindActionCreators(registerUser, dispatch)
   };
 };
