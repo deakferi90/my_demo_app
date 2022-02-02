@@ -38,3 +38,20 @@
 .help-block {
   color: red;
 }
+
+.success-toast {
+  .Toastify {
+    position: absolute;
+    top: 0;
+  }
+
+  .Toastify__toast-theme--light {
+    background: green !important;
+    color: #fff !important;
+  }
+
+  .Toastify__close-button > svg {
+    fill: #fff !important;
+    z-index: 3;
+  }
+}
