@@ -55,9 +55,8 @@ class AddComment extends React.Component {
             value={this.state.comment}
           />
           <button
-            disabled={!this.state.name || !this.state.comment}
             type="button"
-            className={!this.state.name || !this.state.comment ? "disable" : "submitBtn"}
+            className={this.state.name.length < 3 || this.state.comment.length < 3 ? "disable" : "submitBtn"}
             onClick={this.handleComment}
           >
             Submit
