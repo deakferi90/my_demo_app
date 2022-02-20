@@ -3,26 +3,40 @@
     height: 400px;
     margin: 0 auto;
 
-    .slick-prev {
-        left: 2% !important;
-        z-index: 1;
-        &::before {
-            font-size: 50px;
-            position: absolute;
-            left: 50%;
-            color: #4fc5b6;
-        }
+  .slick-prev {
+      font-size: 0;
+      left: 2% !important;
+      z-index: 1;
+      background: none;
+      &::before {
+          font-size: 50px;
+          position: absolute;
+          left: 50%;
+          color: #4fc5b6;
       }
-      .slick-next {
-        right: 2% !important;
-        z-index: 1;
-        &::before {
-            font-size: 50px;
-            position: absolute;
-            right: 50%;
-            color: #4fc5b6;
-        }
+
+      &:hover {
+        background: none;
+        border: none;
       }
+    }
+    .slick-next {
+      font-size: 0;
+      right: 2% !important;
+      z-index: 1;
+      background: none;
+      &::before {
+          font-size: 50px;
+          position: absolute;
+          right: 50%;
+          color: #4fc5b6;
+      }
+
+      &:hover {
+        background: none;
+        border: none;
+      }
+    }
 }
 
 .image {

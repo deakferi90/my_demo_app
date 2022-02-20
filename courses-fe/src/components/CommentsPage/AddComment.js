@@ -28,16 +28,15 @@ class AddComment extends React.Component {
   };
 
   handleComment = () => {
-    if (!this.state.name.length || !this.state.comment.length) {
-      alert("Fill up both fields!");
-      return;
-    } else {
+    // if (!this.state.name.length || !this.state.comment.length) {
+    //   alert("Fill up both fields!");
+    //   return;
+    // } else {
       this.props.addComment(
         this.state.name,
         this.state.date,
         this.state.comment
       );
-    }
   };
 
   render() {
@@ -60,8 +59,9 @@ class AddComment extends React.Component {
             value={this.state.comment}
           />
           <button
+            disabled={!this.state.name || !this.state.comment}
             type="button"
-            className="submitBtn"
+            className={!this.state.name || !this.state.comment ? "disable" : "submitBtn"}
             onClick={this.handleComment}
           >
             Submit

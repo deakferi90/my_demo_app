@@ -49,3 +49,19 @@
         }
     }
 }
+
+.modal-header {
+    border-bottom: none !important;
+}
+
+.modal-footer {
+    border-top: none !important;
+}
+
+.email {
+    display: flow-root;
+
+    input {
+        border: 1px solid #cdcdcd;
+    }
+}
