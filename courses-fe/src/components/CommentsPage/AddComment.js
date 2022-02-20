@@ -28,10 +28,6 @@ class AddComment extends React.Component {
   };
 
   handleComment = () => {
-    // if (!this.state.name.length || !this.state.comment.length) {
-    //   alert("Fill up both fields!");
-    //   return;
-    // } else {
       this.props.addComment(
         this.state.name,
         this.state.date,
