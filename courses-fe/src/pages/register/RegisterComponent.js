@@ -23,7 +23,6 @@ const RegisterComponent = ({ registerUser }) => {
         notify();
         setTimeout(() => navigate('/login'), 2000);
     }
-    }
     useRegisterCheck(navigate);
 
 
@@ -70,6 +69,7 @@ const RegisterComponent = ({ registerUser }) => {
                 autoClose={2000}
                 hideProgressBar={true}
             />
+            </div>
         </form>
     );
 }

@@ -1,0 +1,141 @@
+html {
+    -ms-text-size-adjust: 100%;
+    box-sizing: border-box;
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    color: #404040;
+    background: white;
+    font-size: 1rem;
+    margin: 0;
+  }
+  
+  input {
+    margin: 20px;
+    resize: none;
+    font-size: 20px;
+    height: 25px;
+    width: 200px;
+  }
+  
+  textarea {
+    margin-left: 20px;
+    resize: none;
+    font-size: 18px;
+    overflow: auto;
+    height: auto;
+  }
+  
+  .container,
+  .small-container,
+  .medium-container {
+    max-width: 1200px;
+    padding: 0 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .submitBtn {
+    height: 2.5rem;
+    width: 8rem;
+    margin: 20px;
+    resize: none;
+  }
+  
+  .submitComm {
+    height: 5rem;
+  }
+  
+  .commentsSection {
+    margin: 20px;
+    height: 100px;
+    width: 300px;
+  }
+  
+  .nameSection {
+    margin: 10px;
+  }
+  
+  .commentSection {
+    margin: 10px;
+  }
+  
+  .deleteBtn {
+    height: 2.1rem;
+    width: 7rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Buttons
+    =============== */
+  .button,
+  a.button,
+  button,
+  [type="reset"],
+  [type="button"] {
+    -webkit-appearance: none;
+    display: inline-block;
+    border: 1px solid #0366ee;
+    border-radius: 4px;
+    background: #0366ee;
+    color: #ffffff;
+    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica,
+      Arial, sans-serif;
+    font-size: 1rem;
+    text-transform: none;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    line-height: 1;
+  }
+  
+  .button:hover,
+  a.button:hover,
+  button:hover,
+  [type="submit"]:hover,
+  [type="reset"]:hover,
+  [type="button"]:hover {
+    border: 1px solid #0250bc;
+    background: #0250bc;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  /* Textarea
+    =============== */
+  [type="tel"],
+  [type="text"],
+  textarea {
+    display: block;
+    border: 1px solid #cdcdcd;
+    border-radius: 4px;
+    padding: 0.75rem;
+    outline: none;
+    background: transparent;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    width: 20rem;
+    max-width: 100%;
+    line-height: 2;
+  }
+  
+.container-comment-form {
+    background: none !important;
+
+    form {
+        display: inline-grid;
+
+        textarea {
+            resize: none;
+        }
+    }
+} 

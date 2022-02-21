@@ -1,0 +1,82 @@
+
+.parent-flex {
+    display: flex;
+    flex-direction: row;
+}
+.btn-cont {
+    button {
+        margin-left: 5px;
+        border: 1px solid transparent;
+        vertical-align: top;
+        height: 25px;
+        line-height: 0;
+    }
+}
+
+.container-dropdown-form {
+    display: flex;
+    flex-direction: row;
+    background: none;
+}
+
+.add-item {
+    margin: 30px;
+}
+
+.list-item-container {
+    height: 200px;
+    width: 200px;
+    border: 1px solid purple;
+    background: none;
+
+    .deleteBtn {
+        float: right;
+        width: auto;
+        background: none;
+        color: purple;
+        border: none;
+    }
+}
+
+.select-cont {
+    height: 30px;
+    margin: 20px;
+}
+
+.list-container {
+    display: flex;
+    text-align: center;
+    .box {
+        width: 200px;
+        height: 200px;
+        border: 1px solid purple;
+        margin-left: 140px;
+        margin-top: 140px;
+
+        &:nth-of-type(2) {
+            margin-left: 20px;
+        }
+    }
+}
+
+.input-and-box-container {
+    position: relative;
+
+    .btn-cont {
+        float: left;
+        position: absolute;
+        top: 50px;
+        right: 130px;
+    }
+
+    input {
+        position: absolute;
+        right: 160px;
+        top: 50px;
+    }
+}
+
+.special-list {
+    margin-top: 20px;
+    border: 1px solid purple;
+}
