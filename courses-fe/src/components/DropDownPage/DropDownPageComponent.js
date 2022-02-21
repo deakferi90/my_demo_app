@@ -23,7 +23,6 @@ const DropDownPageComponent = ({
     const handleChangelistWord = (e) => {
         setListName(e.target.value)
     }
-
     const handleSubmit = () => {
         addItemAction(name);
         setName('');
@@ -95,8 +94,8 @@ const DropDownPageComponent = ({
     }
 
     useEffect(() => {
-        console.log(specialWords);
-        console.log(listWords);
+        console.log(pairNumbers);
+        console.log(imPairNumbers)
     })
 
     return (
@@ -157,6 +156,7 @@ const DropDownPageComponent = ({
                         <div className='box'><div className='list-title'>Special Words</div>
                             <div className='list'>{specialWords.map((special) => {
                                 return <div key={special}>{special}</div>
+                                return <div>{num}</div>
                             })}</div>
                         </div>
                     </div>
@@ -186,6 +186,8 @@ const DropDownPageComponent = ({
                 <div className='counter-button-container'><button onClick={()=> decrementNumber()} className='counter-button'>-</button></div>
                 <div className='counter-value'>{counter}</div>
             </div>
+            </div>
+            <div className='special-list'>Feri</div>
         </div>
     )
 }

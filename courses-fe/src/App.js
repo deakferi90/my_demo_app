@@ -14,6 +14,7 @@ import DetailsPage from './components/DetailsPage/DetailsPageComponent';
 import Service from './components/Service/ServiceComponent';
 import ProtectedPageTemplate from './templates/ProtectedPageTemplate';
 import HighCharts from './pages/Highchart/HighchartsComponent';
+//import InterviewComponent from './components/Interview/InterviewComponent';
 import './App.css';
 
 
