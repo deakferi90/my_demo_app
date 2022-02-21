@@ -5,3 +5,7 @@ export const ADD_PAIR =  'DropDownPage/ADD_PAIR';
 export const ADD_IMPAIR =  'DropDownPage/ADD_IMPAIR';
 export const SPECIAL_WORD = 'DropDownPage/SPECIAL_WORD';
 export const LIST_WORD = 'DropDownPage/LIST_WORD';
+export const OPEN_MODAL = 'DropDownPage/OPEN_MODAL';
+export const CLOSE_MODAL = 'DropDownPage/CLOSE_MODAL';
+export const INCREMENT = 'DropDownPage/INCREMENT';
+export const DECREMENT = 'DropDownPage/DECREMENT';

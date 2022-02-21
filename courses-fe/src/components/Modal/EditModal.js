@@ -53,7 +53,7 @@ export const EditModal = (props) => {
                 </Modal.Header>
                 <Modal.Body>
                     <div>
-                        <div><label>Email</label>
+                        <div className='email'><label>Email</label>
                             <input
                                 type="email"
                                 name="email"

@@ -33,3 +33,44 @@ export const addImPairNumber = (imPairNumber) => {
     imPairNumber
   }
 }
+
+export const addSpecialWord = (specialWord) => {
+  return {
+    type: actionTypes.SPECIAL_WORD,
+    specialWord
+  }
+}
+
+export const addListWord = (listWord) => {
+  return {
+    type: actionTypes.LIST_WORD,
+    listWord
+  }
+}
+
+export const openModal = (text) => {
+  return {
+    type: actionTypes.OPEN_MODAL,
+    text
+  }
+}
+
+export const closeModal = () => {
+  return {
+    type: actionTypes.CLOSE_MODAL
+  }
+}
+
+export const increment = (count) => {
+  return {
+    type: actionTypes.INCREMENT,
+    count
+  }
+}
+
+export const decrement = (count) => {
+  return {
+    type: actionTypes.DECREMENT,
+    count
+  }
+}
