@@ -1,0 +1,18 @@
+.comments-box {
+    margin: 10px 0 0 18px;
+    border: 1px solid grey;
+    max-width: 40%;
+    height: auto;
+
+    &.empty-box {
+        display: none;
+    }
+}
+
+.nothing {
+    display: none;
+}
+
+.comments-title {
+    margin: 5px 0 0 5px;
+}
