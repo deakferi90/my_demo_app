@@ -32,12 +32,16 @@ class RestHelper {
         return this.instance.post(url, params);
     }
 
+    put(url, params) {
+      return this.instance.put(url, params);
+    }
+
     delete(url, params) {
         return this.instance.delete(url, params);
     }
-    
+
     patch(url, params) {
-        return this.instance.patch(url, params);
+      return this.instance.patch(url, params);
     }
 }
 export default new RestHelper(axiosInstance);

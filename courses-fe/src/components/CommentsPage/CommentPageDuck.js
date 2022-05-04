@@ -1,6 +1,7 @@
 import * as actionTypes from './constants';
 
 const comments = (state = [], action) => {
+  console.log(state);
     switch (action.type) {
       case actionTypes.ADD_COMMENT:
         return [

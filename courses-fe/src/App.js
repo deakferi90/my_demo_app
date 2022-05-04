@@ -10,7 +10,7 @@ import DropDownPage from './components/DropDownPage/DropDownPageContainer';
 import { Login } from './pages/login';
 import { Register } from './pages/register';
 import Table from './components/Table/TableComponent';
-import DetailsPage from './components/DetailsPage/DetailsPageComponent';
+import DetailsPage from './components/DetailsPage/DetailsPageContainer';
 import Service from './components/Service/ServiceComponent';
 import ProtectedPageTemplate from './templates/ProtectedPageTemplate';
 import HighCharts from './pages/Highchart/HighchartsComponent';

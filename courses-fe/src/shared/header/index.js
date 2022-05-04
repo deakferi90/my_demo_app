@@ -20,7 +20,7 @@ const Header = () => {
               <Nav.Link href="/comments-page">CommentPage</Nav.Link>
               <Nav.Link href="/dropdown-page">DropDownPage</Nav.Link>
               <Nav.Link href="/table-page">Dynamic Table Page</Nav.Link>
-              <Nav.Link href="/details-page">Details Page</Nav.Link>
+              <Nav.Link href="/details-page">Material UI</Nav.Link>
               <Nav.Link href="/service">Service</Nav.Link>
               <Nav.Link href="/about">About</Nav.Link>
               {/* <Nav.Link href="/interview">Interview</Nav.Link> */}
