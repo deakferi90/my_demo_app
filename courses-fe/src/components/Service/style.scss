@@ -22,3 +22,26 @@
         }
     }
 }
+
+.input-container {
+    margin: 40px 20px;
+}
+
+.list-container {
+    margin-top: 75px;
+    margin-left: 30px;
+    display: block;
+    text-align: left;
+
+    li {
+        list-style-type: none;
+    }
+}
+
+.adding-text {
+    margin-left: 30px;
+    .input-box, button {
+        height: 30px;
+        line-height: 30px;
+    }
+}

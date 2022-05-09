@@ -5,7 +5,7 @@ export const getData = async () => {
     const endpoint = "https://jsonplaceholder.typicode.com/posts";
   try {
         const { data } = await RestHelper.post(endpoint, {
-            userId: 101,
+            userId: 1,
             id: 101,
             title: 'Feri is learning axios',
             body: 'His friend Alex helped him a lot and he is grateful'
@@ -16,7 +16,4 @@ export const getData = async () => {
     }
 };
 
-// axios.post("/user", {
-//   firstName: "Fred",
-//   lastName: "Flintstone",
-// });
+
